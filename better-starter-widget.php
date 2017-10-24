@@ -1,4 +1,13 @@
 <?php
+/**
+ * Plugin Name: Better Starter Widget
+ * Plugin URI:
+ * Description: This is the widget description
+ * Version: 1.0
+ * Author: Shramee
+ * Author URI: http://shramee.me/
+ * License: GPL2
+ */
 
 // Register the widget
 add_action( 'widgets_init', 'Widget_Better_Starter_Widget::register_widget' );
@@ -9,7 +18,7 @@ add_action( 'widgets_init', 'Widget_Better_Starter_Widget::register_widget' );
 class Widget_Better_Starter_Widget extends WP_Widget {
 	/** Basic Widget Settings */
 	const WIDGET_NAME = "Better Starter Widget";
-	const WIDGET_DESCRIPTION = "This is the description";
+	const WIDGET_DESCRIPTION = "This is the widget description";
 
 	var $textdomain;
 	var $fields;
