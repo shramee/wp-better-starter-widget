@@ -9,10 +9,8 @@ Author URI: http://snippets.khromov.se
 License: GPL2
 */
 
-/**
- * Register the widget
- */
-add_action('widgets_init', create_function('', 'return register_widget("Widget_Better_Starter_Widget");'));
+// Register the widget
+add_action( 'widgets_init', 'Widget_Better_Starter_Widget::register_widget' );
 
 /**
  * Class Widget_Better_Starter_Widget
@@ -25,6 +23,14 @@ class Widget_Better_Starter_Widget extends WP_Widget
 
 	var $textdomain;
 	var $fields;
+
+	/**
+	 * Registers widget
+	 * @action widgets_init
+	 */
+	public static function register_widget() {
+		register_widget( "Widget_Better_Starter_Widget" );
+	}
 
 	/**
 	 * Construct the widget
